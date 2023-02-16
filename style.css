@@ -2,6 +2,9 @@
     font-family:PressStart;
     src:url(fonts/Press_Start_2P/PressStart2P-Regular.ttf)
 }
+#logo{
+
+}
 
 body{
     font-family:PressStart;
@@ -9,11 +12,12 @@ body{
 }
 
 .bt{
+    
     font-family:PressStart;
     font-size:15px;
     color:#ff0;
     background-color: var(--clr-rgba);
-
+  
 }
 
 .bt:hover{
