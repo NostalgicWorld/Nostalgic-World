@@ -1,0 +1,23 @@
+@font-face {
+    font-family:PressStart;
+    src:url(fonts/Press_Start_2P/PressStart2P-Regular.ttf)
+}
+
+body{
+    font-family:PressStart;
+    background-color: #000;
+}
+
+.bt{
+    font-family:PressStart;
+    font-size:15px;
+    color:#ff0;
+    background-color: var(--clr-rgba);
+
+}
+
+.bt:hover{
+    transform: translateX(5px);
+    color: #fff;
+
+}
