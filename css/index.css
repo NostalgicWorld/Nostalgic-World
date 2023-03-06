@@ -1,0 +1,167 @@
+/*CSS reset*/
+* {
+margin: 0;
+border: 0;
+padding: 0;
+}
+
+@font-face {
+font-family: navegacao1;
+src: url(../fonts/Coustard/Coustard-Regular.ttf);
+}
+
+@font-face {
+font-family: titulo;
+src: url(../fonts/Sriracha/Sriracha-Regular.ttf);
+}
+
+@font-face {
+font-family: texto;
+src: url(../fonts/Molengo/Molengo-Regular.ttf);
+}
+
+@font-face {
+font-family: subtitulo;
+src: url(../fonts/Prosto_One/ProstoOne-Regular.ttf);
+}
+
+@font-face {
+font-family: enviar;
+src: url(../fonts/Pridi/Pridi-SemiBold.ttf);
+}
+
+body {
+position: relative;
+background-color: #0d0d0d;
+color: #fff;
+font-family: texto;
+}
+
+main {
+position: relative;
+width: 100%;
+height: 1000px;
+height: auto;
+}
+
+header {
+position: relative;
+width: 100%;
+height: 134.4px;
+background-image: url(../images/HEADER.png);
+background-size: cover;
+}
+
+#nav1 {
+position: relative;
+width: 100%;
+height: 5vw;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+
+#nw1 {
+position: relative;
+width: 91px;
+height: 53px;
+right: 65%;
+bottom: 2vw;
+}
+
+#login {
+position: relative;
+left: 60%;
+bottom: 19.2px;
+}
+
+header a {
+position: relative;
+height: 0;
+font-family: navegacao1;
+font-size: 15px;
+color: #fff;
+text-decoration: none;
+top: 57.8px;
+}
+
+#talk {
+font-family: navegacao1;
+}
+
+#time-machine {
+width: 1182px;
+height: 349px;
+margin: auto;
+margin-top: 65px;
+}
+
+#alien1{
+position: relative;
+width: 930px;
+height: 570px;
+margin: auto;
+text-align: center;
+font-size: 25px;
+}
+
+#alien1 p{
+    font-family: enviar;
+}
+
+#continueWatching{
+    position: relative;
+    top: 200px;
+    position: relative;
+    margin: auto;
+    width: 90%;
+    margin-bottom: 100px;
+}
+
+#topmovies{
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.movielater{
+    position: relative;
+    width: 300px;
+    height: 175px;
+    transition: .3s;
+
+}
+.movielater:hover{
+    transition: .3s ease-out;
+    transform: scale(1.3, 1.3)
+}
+
+.decadas{
+    position: relative;
+    margin: auto;
+    margin-top: 300px;
+    width: 90%;
+    height: 334px;
+}
+
+.movieNow{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border: 1px solid white;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.decadas nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.movieNow:hover{
+    transition: .3s;
+    transform: scale(1.14, 1.14);
+}
