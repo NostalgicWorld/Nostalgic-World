@@ -48,8 +48,22 @@ header {
 position: relative;
 width: 100%;
 height: 134.4px;
-background-image: url(../images/HEADER.png);
 background-size: cover;
+}
+
+
+#linhas{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: grid;
+}
+
+.linha{
+    position: relative;
+    border: 1px solid white;
+    width: 100%;
+    height: 20px;
 }
 
 #nav1 {
@@ -79,10 +93,10 @@ header a {
 position: relative;
 height: 0;
 font-family: navegacao1;
-font-size: 15px;
+font-size: 20px;
 color: #fff;
 text-decoration: none;
-top: 57.8px;
+top: 50.5px;
 }
 
 #talk {
@@ -107,6 +121,33 @@ font-size: 25px;
 
 #alien1 p{
     font-family: enviar;
+}
+
+
+
+#categorias{
+    position: relative;
+    width: 89%;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.botaoCategoria{
+    position: relative;
+    width: 10%;
+    height: 30px;
+    background-color: #b20000;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+    padding: 5px;
+    box-sizing: border-box;
 }
 
 #continueWatching{
