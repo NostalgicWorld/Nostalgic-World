@@ -1,0 +1,630 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: navegacao1;
+    src: url(../Fontes/Coustard/Coustard-Regular.ttf);
+}
+
+@font-face {
+    font-family: navegacao2;
+    src: url(../Fontes/Coustard/Coustard-Black.ttf);
+}
+
+@font-face {
+    font-family: titulo;
+    src: url(../Fontes/market_deco/Market_Deco.ttf);
+}
+
+@font-face {
+    font-family: texto;
+    src: url(../Fontes/Molengo/Molengo-Regular.ttf);
+}
+
+@font-face {
+    font-family: subtitulo;
+    src: url(../Fontes/La_Belle_Aurore/LaBelleAurore-Regular.ttf);
+}
+
+@font-face {
+    font-family: enviar;
+    src: url(../Fontes/Pridi/Pridi-SemiBold.ttf);
+}
+
+body {
+    position: relative;
+    background-color: #0d0d0d;
+    color: #fff;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+#headermain{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 134.4px;
+}
+
+#logohead{
+    width: 110px;
+    margin-left: 5%;
+}
+
+#headleft{
+    display: flex;
+    width: 75%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#headleft nav{
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header nav a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 10px;
+}
+
+#headright{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    width: 500px;
+}
+#lupa{
+    display: none;
+}
+
+#menu{
+    filter: invert(100%);
+    display: none;
+}
+
+#talk {
+    font-family: navegacao1;
+}
+
+#imgtopo{
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+#imgtopo img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#meio {
+    position: relative;
+    width: 85%;
+    margin: auto;
+    top: 136.6px;
+}
+
+article {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    height: auto;
+}
+
+#parte1 {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#header_parte1{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+#header_parte1 h1 {
+    font-size: 90px;
+    font-family: titulo;
+    color: #EFEDE6;
+    text-shadow: 0px 4px 70px #FFD702;
+    width: auto;
+    margin-left: 8%;
+}
+
+#header_parte1 img{
+    margin: 15px 10px;
+    top: 10px;
+    width: 200px;
+}
+
+.texto1{
+    font-size: 30px;
+    font-family: texto;
+    margin-top: 30px;
+    width: 50%;
+    text-align: left;
+}
+
+#meio h2 {
+    position: relative;
+    width: 60%;
+    margin: auto;
+    font-size: 70px;
+    font-family: subtitulo;
+    color: #FF0000;
+    text-shadow : 0px 4px 25px #FF0000 ;
+}
+
+#formulario {
+    position: relative;
+    width: 100%;
+    height: 478.1px;
+    margin: auto;
+    top: 68.3px;
+    background-color: #0D0D0D;
+    border-left: 2px solid #FFD702;
+    border-right: 2px solid #FFD702;
+    border-bottom: 2px solid #FFD702;
+}
+
+#formulario p {
+    font-size: 20px;
+    border-top: 2px solid #FFD702;
+    letter-spacing: 0.05em;
+    text-indent: 20px;
+    font-family: texto;
+}
+
+div p {
+    position: relative;
+    text-align: left;
+}
+
+#enviar{
+    position: relative;
+    width: 15%;
+    height: 40.9px;
+    background-color: #FFA601;
+    float: right;
+    text-align: center;
+    top: 122.9px;
+    border-radius: 5px;
+}
+
+#enviar a {
+    position: relative;
+    font-family: enviar;
+    font-size: 30px;
+    text-decoration: none;
+    color: #B20000;
+    -webkit-text-stroke: 0.5px #fff
+}
+
+#enviar a:hover {
+    text-decoration-line: underline;
+}
+
+#betty{
+    position: absolute;
+    z-index: 1;
+    right: 1%;
+    bottom: 0;
+}
+
+#privacidade{
+    margin-top: 437.1px;
+    flex-direction: grid;
+}
+
+#privacidade article {
+    width: 85%;
+}
+
+#base {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+#base h2 {
+    position: relative;
+    width: auto;
+    font-size: 70px;
+    font-family: subtitulo;
+    color: #FF0000;
+    text-shadow : 0px 4px 25px #FF0000 ;
+    text-align: right;
+    align-self: flex-end;
+}
+
+#privacidade img{
+    width: 380px;
+    height: 220px;
+    display: flex; 
+    justify-content: left;
+    text-align: left;
+}
+
+#privacidade_texto {
+    font-size: 30px;
+    font-family: texto;
+    margin-top: 30px;
+    width: 100%;
+    text-align: left;
+    align-items: center;
+}
+
+
+footer{
+    width: 100%;
+    height: 150px;
+    margin-top: 10%;
+    background-color: #0e0a1d;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  #footleft{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #imagem{
+    height: 100%;
+    width: 150px;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #footleft nav{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-left: 1px solid #fff;
+  }
+  
+  #footleft nav a{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 10px;
+  }
+  
+  #footright{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  #copyright{
+    color: #fff;
+    margin-top: 125px;
+  }
+  
+  #redes{
+    height: 100%;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #redes p{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+/* Final da Programação*/
+
+/*Design smatphone (Início)*/
+
+@media only screen and (max-width:480px) {
+    main {
+        width: 100%;
+        height: auto;  
+    }
+
+    /*Início da Header smartphone*/
+
+    header{
+        justify-content: space-between;
+    }
+    #lupa{
+        display: block;
+        margin-right: 30px;
+        width: 50px;
+    }
+
+    #headleft nav{
+        display: none;
+    }
+
+
+    /*Fim da Header smartphone*/
+
+    /*Início do meio smartphone*/
+
+    #header_parte1{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #header_parte1 h1 {
+        font-size: 60px;
+    }
+    
+    #header_parte1 img{
+        margin: 10px 10px;
+        width: 100px;
+        height: 141px;
+        margin-top: 20px;
+    }
+
+    .texto1 {
+        width: 90%;
+    }
+    
+    #meio {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #meio h2 {
+        width: 100%;
+    }
+
+    #formulario p {
+        margin-top: 25px;
+    }
+
+    #privacidade {
+        width: 90%;
+    }
+
+    #privacidade h2 {
+        text-align: center;
+    }
+
+    #privacidade img {
+        display: none;
+        width: 300px;
+        height: 180px;
+    }
+
+    #enviar {
+        width: 30%;
+    }
+    
+    
+    /*Fim do meio smartphone*/ 
+
+    /*Início do Footer smartphone*/
+
+    footer{
+        margin-top: 15%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      #footleft{
+        flex-direction: column;
+        width: 100%;
+        border-bottom: 1px solid #fff;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      #footleft nav{
+        border-left: none;
+        height: 150px;
+        text-align: center;
+      }
+    
+      #footleft nav a{
+        margin: 15px 0;
+      }
+    
+      
+      #footright{
+        flex-direction: column-reverse;
+        align-items: center;
+        width: auto;
+      }
+    
+      #redes{
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+    
+    #redes div{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 150px;
+    }
+      
+      #copyright{
+        margin: 0px;
+    }
+}
+
+/*final da footer responsivo*/
+
+
+
+/*Design smartphone (Fim)*/
+
+/*Design tablet (Início)*/
+
+@media only screen and (min-width:481px) {
+    @media only screen and (max-width:768px)
+    {
+        main{
+            width: 100%;
+        }
+
+        /*Início header tablet*/
+
+        #avatar, #headright{
+            display: none;
+        }
+    
+        #menu{
+            display: block;
+        }
+    
+
+        /*Fim header tablet*/
+
+        /*Início meio tablet*/
+
+        #header_parte1{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #header_parte1 h1 {
+            font-size: 60px;
+        }
+        
+        #header_parte1 img{
+            margin: 10px 10px;
+            width: 100px;
+            height: 141px;
+            margin-top: 20px;
+        }
+
+        .texto1 {
+            width: 85%;
+        }
+        
+        #meio {
+            width: 90%;
+            margin-left: 5%;
+        }
+
+        #meio h2 {
+            width: 100%;
+           
+        }
+
+        #formulario p {
+            margin-top: 25px;
+        }
+
+        #privacidade {
+            width: 95%;
+        }
+
+        #privacidade h2 {
+            text-align: center;
+        }
+
+        #privacidade p {
+            width: 100%;
+        }
+
+        #privacidade img {
+            display: none;
+            width: 300px;
+            height: 180px;
+        }
+
+        #enviar {
+            width: 30%;
+        }
+
+        /*Fim meio tablet*/
+
+        /*Início footer tablet*/
+
+        footer{
+            margin-top: 15%;
+            height: auto;
+            flex-direction: column;
+            align-items: center;
+          }
+        
+          #footleft{
+            flex-direction: column;
+            width: 100%;
+            border-bottom: 1px solid #fff;
+            justify-content: center;
+            align-items: center;
+          }
+        
+          #footleft nav{
+            border-left: none;
+            height: 150px;
+            text-align: center;
+          }
+        
+          #footleft nav a{
+            margin: 15px 0;
+          }
+        
+          
+          #footright{
+            flex-direction: column-reverse;
+            align-items: center;
+            width: auto;
+          }
+        
+          #redes{
+            margin-top: 15px;
+            margin-bottom: 15px;
+          }
+        
+        #redes div{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 150px;
+        }
+          
+          #copyright{
+            margin: 0px;
+          }
+        }
+    }
+/*Fim do Design tablet*/
