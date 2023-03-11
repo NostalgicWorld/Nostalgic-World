@@ -6,32 +6,32 @@
 
 @font-face {
     font-family: navegacao1;
-    src: url(../Fontes/Coustard/Coustard-Regular.ttf);
+    src: url(../fonts/Coustard/Coustard-Regular.ttf);
 }
 
 @font-face {
     font-family: navegacao2;
-    src: url(../Fontes/Coustard/Coustard-Black.ttf);
+    src: url(../fonts/Coustard/Coustard-Black.ttf);
 }
 
 @font-face {
     font-family: titulo;
-    src: url(../Fontes/market_deco/Market_Deco.ttf);
+    src: url(../fonts/market_deco/Market_Deco.ttf);
 }
 
 @font-face {
     font-family: texto;
-    src: url(../Fontes/Molengo/Molengo-Regular.ttf);
+    src: url(../fonts/Molengo/Molengo-Regular.ttf);
 }
 
 @font-face {
     font-family: subtitulo;
-    src: url(../Fontes/La_Belle_Aurore/LaBelleAurore-Regular.ttf);
+    src: url(../fonts/La_Belle_Aurore/LaBelleAurore-Regular.ttf);
 }
 
 @font-face {
     font-family: enviar;
-    src: url(../Fontes/Pridi/Pridi-SemiBold.ttf);
+    src: url(../fonts/Pridi/Pridi-SemiBold.ttf);
 }
 
 body {
