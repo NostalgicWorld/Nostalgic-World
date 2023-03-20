@@ -1,8 +1,8 @@
 /*CSS reset*/
 * {
-margin: 0;
-border: 0;
-padding: 0;
+    margin: 0;
+    border: 0;
+    padding: 0;
 }
 
 @font-face {
@@ -11,46 +11,159 @@ src: url(../fonts/Coustard/Coustard-Regular.ttf);
 }
 
 @font-face {
-font-family: titulo;
-src: url(../fonts/Sriracha/Sriracha-Regular.ttf);
+    font-family: nostalgic;
+    src: url(../fonts/market_deco/Market_Deco.ttf);
 }
 
 @font-face {
-font-family: texto;
-src: url(../fonts/Molengo/Molengo-Regular.ttf);
+    font-family: maquina;
+    src: url(../fonts/La_Belle_Aurore/LaBelleAurore-Regular.ttf);
 }
 
 @font-face {
-font-family: subtitulo;
-src: url(../fonts/Prosto_One/ProstoOne-Regular.ttf);
+    font-family: titulo;
+    src: url(../fonts/Sriracha/Sriracha-Regular.ttf);
 }
 
 @font-face {
-font-family: enviar;
-src: url(../fonts/Pridi/Pridi-SemiBold.ttf);
+    font-family: texto;
+    src: url(../fonts/Molengo/Molengo-Regular.ttf);
+}
+
+@font-face {
+    font-family: subtitulo;
+    src: url(../fonts/Prosto_One/ProstoOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: enviar;
+    src: url(../fonts/Pridi/Pridi-SemiBold.ttf);
+}
+
+#hamburger {
+    display: none;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+	transition: color 0.3s ease;
+}
+
+#menuToggle {
+	display: block;
+	position: relative;
+	right: 20px;
+    bottom: 10px;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#menuToggle input {
+	display: block;
+	width: 40px;
+	height: 32px;
+    position: relative;
+	left: -5px;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 11;
+	-webkit-touch-callout: none;
+}
+
+#menuToggle span {
+	display: block;
+    position: relative;
+	width: 33px;
+	height: 4px;
+	margin-bottom: 5px;
+	background: #fff;
+	border-radius: 3px;
+	z-index: 11;
+	transform-origin: 4px 0px;
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+	background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+	opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+	transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+	transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked~span {
+	opacity: 1;
+	transform: rotate(45deg) translate(-2px, -1px);
+	background: #fff;
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+	opacity: 0;
+	transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+	opacity: 1;
+	transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+	position: fixed;
+	width: 300px;
+	margin: -100px 0 0 0;
+	padding: 50px;
+	padding-top: 125px;
+	right: -100px;
+	background: #0d0d0d;
+    z-index: 10;
+	list-style-type: none;
+	-webkit-font-smoothing: antialiased;
+	transform-origin: 0% 0%;
+	transform: translate(100%, 0);
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+	padding: 10px 0;
+	font-size: 22px;
+}
+
+#menuToggle input:checked~ul {
+	transform: scale(1.0, 1.0);
+	opacity: 1;
 }
 
 body {
-position: relative;
-background-color: #0d0d0d;
-color: #fff;
-font-family: texto;
+    position: relative;
+    width: 100%;
+    background-color: #0d0d0d;
+    color: #fff; 
+    font-family: texto;
+    overflow-x: hidden;
 }
 
 main {
-position: relative;
-width: 100%;
-height: auto;
+    position: relative;
+    width: 100%;
+    height: auto;
 }
 
 
 header{
     display: flex;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 999;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 134.4px;
+    height: 115px;
+    background-color: #131212;
 }
 
 #logohead{
@@ -76,23 +189,54 @@ header{
 
 header nav a{
     text-decoration: none;
-    color: white;
-
+    color: #fff; 
 }
 
 #headright{
     display: flex;
     flex-direction: row;
-    justify-content: space-around; 
-    width: 500px;
+    justify-content: space-between;
+    text-align: left;
+    margin-right: 5%; 
+    width: 400px;
+}
+
+#pesquisa {
+    display: flex;
+    height: 40px;
+    margin: auto;
+}
+
+#busca1 {
+    position: relative;
+    right: 30px;
+    height: 40px;
+}
+
+#pesquisa img {
+    padding: 6px 4px;
+    height: 38px;
+}
+
+#pesquisa button {
+    float: right;
+    cursor: pointer;
+    background-color: #13121200;
+}
+
+#busca {
+    background-color: #131212;
+    color: #fff;
+    border: 1px solid #fff;
+    height: 40px;
+    width: 158px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    text-indent: 10px;
+    border-radius: 10px;
 }
 
 #lupa{
-    display: none;
-}
-
-#menu{
-    filter: invert(100%);
     display: none;
 }
 
@@ -100,18 +244,35 @@ header nav a{
     width: 62.25%;
     height: auto;
     margin: auto;
-    margin-top: 65px;
+    margin-top: 1vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+#time-machine h1 {
+    font-family: nostalgic;
+    font-size: 7vw;
+    color: #EFEDE6;
+    text-shadow: 0px 4px 70px #FFD702;
+    -webkit-text-stroke: 1px #D99A25;
+}
+
+#time-machine h2 {
+    font-family: maquina;
+    font-size: 4.5vw;
+    color: #FF0000;
+    text-shadow: 0px 4px 25px #FF0000;
+    -webkit-text-stroke: 0.5px #000000;
+    padding-bottom: 1vh;
+}
+
 #time-machine p{
-position: relative;
-width: 100%;
-margin: 0;
-text-align: center;
-font-size: 25px;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-size: 25px;
 }
 
 #alien1 p{
@@ -121,38 +282,46 @@ font-size: 25px;
 
 #categorias{
     position: relative;
-    width: 89%;
+    width: 90%;
     height: 50px;
     margin: auto;
-    margin-top: 120px;
+    margin-top: 10vh;
     display: flex;
     justify-content: space-around;
     justify-content: center;
     align-items: center;
     flex-direction: row;
 }
+
 .botaoCategoria{
     position: relative;
-    width: 14%;
-    height: 53px;
+    width: 5vw;
+    height: auto;
+    padding: 3px;
     min-width: 134.2px;
     background-color: #b20000;
-    color: white;
+    color: #fff;
     text-decoration: none;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     border-radius: 17px;
     margin: auto;
-    padding: 5px;
     box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 75%;
+}
+
+.botaoCategoria:hover {
+    transition: 0.5s;
+    opacity: 100%;
 }
 
 #seta{
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     border-radius: 17px;
     background-color: #b20000;
-    color: white;
+    color: #fff;
 }
 
 #continueWatching{
@@ -163,29 +332,51 @@ font-size: 25px;
     width: 90%;
 }
 
-::-webkit-scrollbar{
-    display: none;
+.vermais {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: right;
+}
+
+.vermais div {
+    width: 80vw;
+    margin: auto;
+    text-align: right;
+    right: 0;
+}
+
+.vermais a {
+    font-size: 22px;
+}
+
+.vermais a:hover {
+    text-decoration: underline;
 }
 
 #topmovies{
-    margin-top: 30px;
+    width: 100%;
+    margin-top: 5px;
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    overflow: scroll;
-    overflow-y:hidden;
-    scroll-snap-type: x mandatory;
 }
 
 .movielater{
     position: relative;
-    width: 300px;
-    height: 175px;
+    width: 20vw;
+    height: 25vh;
     transition: .3s;
-    border: 2px solid white;
-
 }
+
+.movielater img{
+    position: relative;
+    width: 20vw;
+    height: 25vh;
+    border: 2px solid #ffffff;
+}
+
 .movielater:hover{
     transition: .3s ease-out;
     transform: scale(1.05, 1.05)
@@ -194,29 +385,27 @@ font-size: 25px;
 .decadas{
     position: relative;
     margin: auto;
-    margin-top: 300px;
+    margin-top: 10vh;
     width: 90%;
-    height: 334px;
+    height: 55vh;
 }
 
-.decadas nav{
-    overflow: scroll;
-    overflow-y:hidden;
-    scroll-snap-type: x mandatory;
-}
-#anos50{
-    margin-top: 0px;
-    overflow: scroll;
-
+#anos50 {
+    margin-top: 15vh;
 }
 
 .movieNow{
     position: relative;
-    width: 200px;
-    height: 300px;
-    border: 1px solid white;
+    width: 15vw;
+    height: 35vh;
     transition: 0.3s;
-    margin-top: 20px;
+    margin-top: 5px;
+}
+
+.movieNow img {
+    width: 15vw;
+    height: 50vh;
+    border: 1px solid #ffffff;
 }
 
 .decadas nav{
@@ -227,13 +416,13 @@ font-size: 25px;
 
 .movieNow:hover{
     transition: .3s;
-    transform: scale(1.14, 1.14);
+    transform: scale(1.05, 1.05);
 }
 
 footer{
     width: 100%;
     height: 150px;
-    margin-top: 40px;
+    margin-top: 85px;
     background-color: #0e0a1d;
     display: flex;
     flex-direction: row;
@@ -258,12 +447,12 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border-left: 1px solid white;
+    border-left: 1px solid #fff;
   }
   
   #footleft nav a{
     text-decoration: none;
-    color: white;
+    color: #fff;
     margin-left: 10px;
   }
   
@@ -275,7 +464,7 @@ footer{
   }
   
   #copyright{
-    color: white;
+    color: #fff;
     margin-top: 125px;
   }
   
@@ -289,38 +478,79 @@ footer{
   }
   
   #redes p{
-    color: white;
+    color: #fff;
     text-align: center;
     margin-bottom: 20px;
   }
   
 @media only screen and (max-width: 1066px){
 
-    #avatar, #headright{
-        display: none;
-    }
-
     #menu{
         display: block;
     }
 
-    #c6, #c5{
-        display: none;
-    }
-
     .botaoCategoria{
         min-width: 0;
-        height: 50px;
-        width: 100px;
-        font-size: 20px;
+        height: auto;
+        width: 85px;
+        font-size: 15px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    #categorias{
-        width: 95%
+    #seta{
+        width: 30px;
+        height: 30px;
+    }
 
+    .vermais div {
+        width: 80vw;
+        margin: auto;
+        text-align: right;
+        right: 0;
+    }
+    
+    .vermais a {
+        font-size: 20px;
+    }
+
+    #categorias{
+        width: 95%;
+    }
+
+    #continueWatching {
+        width: 95%;
+    }
+
+    #topmovies {
+        width: 100%;
+    }
+
+    .decadas{
+        position: relative;
+        margin: auto;
+        margin-top: 10vh;
+        width: 95%;
+        height: 100%;
+    }
+
+    .movielater{
+        position: relative;
+        width: 21vw;
+        height: 20vh;
+        transition: .3s;
+    }
+
+    .movielater img {
+        position: relative;
+        width: 21vw;
+        height: 21vh;
+    }
+
+    .movieNow, .movieNow img{
+        width: 15vw;
+        height: 40vh;
     }
 
     #nav2{
@@ -336,7 +566,7 @@ footer{
   #footleft{
     flex-direction: column;
     width: 100%;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #fff;
     justify-content: center;
     align-items: center;
     }
@@ -373,27 +603,244 @@ footer{
     #copyright{
       margin: 0px;
     }
+
+    footer {
+        padding: 2vh 0;
+    }
 }
 
-@media only screen and (max-width: 480px){
-    header{
-        justify-content: space-between;
+@media only screen and (max-width:720px) {
+    #time-machine p {
+        font-size: 15px;
     }
+    
+    #headright {
+        display: none;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
     #lupa{
         display: block;
-        margin-right: 30px;
-        width: 50px;
+        padding-top: 5px;
+        margin-right: 45px;
+        width: 40px;
     }
 
     #headleft nav{
         display: none;
     }
 
+    .vermais div {
+        width: 80vw;
+        margin: auto;
+        text-align: right;
+        right: 0;
+    }
+    
+    .vermais a {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    ::-webkit-scrollbar{
+        display: none;
+    }
+
+    .decadas nav{
+        overflow: scroll;
+        overflow-y:hidden;
+        scroll-snap-type: x mandatory;
+    }
+
+    #topmovies {
+        overflow: scroll;
+        overflow-y:hidden;
+        scroll-snap-type: x mandatory;
+    }
+
+    .decadas{
+        position: relative;
+        margin: auto;
+        margin-top: 10vh;
+        width: 95%;
+        height: 200px;
+    }
+
+    .movielater{
+        position: relative;
+        width: 150px;
+        height: 87px;
+        transition: .3s;
+        margin: 0 2px;
+    }
+
+    .movielater img {
+        position: relative;
+        width: 150px;
+        height: 87px;
+    }
+
+    .movieNow, .movieNow img{
+        width: 120px;
+        height: 200px;
+        margin: 0 2px;
+    }
+
+    footer {
+        padding: 2vh 0;
+    }
+}
+
+
+@media only screen and (max-width:600px) {
+    #c6 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:510px) {
+    #c5 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    body {
+        width: 100%;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+    #lupa{
+        display: block;
+        padding-top: 5px;
+        margin-right: 45px;
+        width: 40px;
+    }
+
+    #headleft nav{
+        display: none;
+    }
+
+    .vermais div {
+        width: 75vw;
+        margin: auto;
+        text-align: right;
+        right: 0;
+    }
+    
+    .vermais a {
+        font-size: 20px;
+        text-align: right;
+    }
+
     #time-machine{
         width: 90%
     }
 
-    #c4{
+    #time-machine h1 {
+        font-size: 10.5vw;
+    }
+    
+    #time-machine h2 {
+        font-size: 7vw;
+    }
+
+    #time-machine p {
+        font-size: 13px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    ::-webkit-scrollbar{
         display: none;
     }
+
+    .decadas nav{
+        overflow: scroll;
+        overflow-y:hidden;
+        scroll-snap-type: x mandatory;
+    }
+
+    #topmovies {
+        overflow: scroll;
+        overflow-y:hidden;
+        scroll-snap-type: x mandatory;
+    }
+
+    .decadas{
+        position: relative;
+        margin: auto;
+        margin-top: 10vh;
+        width: 95%;
+        height: 200px;
+    }
+
+    .movielater{
+        position: relative;
+        width: 150px;
+        height: 87px;
+        transition: .3s;
+    }
+
+    .movielater img {
+        position: relative;
+        width: 150px;
+        height: 87px;
+    }
+
+    .movieNow, .movieNow img{
+        width: 120px;
+        height: 200px;
+    }
+
+    footer {
+        padding: 2vh 0;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #c4 {
+        display: none;
+    }
+
+    footer {
+        font-size: 15px;
+    }
+
+    #copyright {
+        font-size: 10px
+    }
+
+    .vermais div {
+        width: 66vw;
+        margin: auto;
+        text-align: right;
+        right: 0;
+    }
+    
+    .vermais a {
+        font-size: 20px;
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width: 200px) {
+    #c3 {
+        display: none;
+    }
+}
+
+.carousel-inner{
+    width: 63vw;
 }

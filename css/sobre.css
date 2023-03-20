@@ -1,0 +1,911 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+@font-face {
+    font-family: "labelle";
+    src: url(/fonts/La_Belle_Aurore/LaBelleAurore-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'market';
+    src: url(/fonts/market_deco/Market_Deco.ttf);
+}
+
+@font-face {
+    font-family: 'Molengo';
+    src: url(/fonts/Molengo/Molengo-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'navegacao1';
+    src: url(/fonts/Coustard/Coustard-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'navegacao2';
+    src: url(/fonts/Coustard/Coustard-Black.ttf);
+}
+
+/*Inicio programação desktop*/
+
+#hamburger {
+    display: none;
+}
+
+a {
+	text-decoration: none !important;
+	color: #fff;
+	transition: color 0.3s ease;
+}
+
+#menuToggle {
+	display: block;
+	position: relative;
+	right: 20px;
+    bottom: 10px;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#menuToggle input {
+	display: block;
+	width: 40px;
+	height: 32px;
+    position: relative;
+	left: -5px;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 11;
+	-webkit-touch-callout: none;
+}
+
+#menuToggle span {
+	display: block;
+    position: relative;
+	width: 33px;
+	height: 4px;
+	margin-bottom: 5px;
+	background: #fff;
+	border-radius: 3px;
+	z-index: 11;
+	transform-origin: 4px 0px;
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+	background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+	opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+	transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+	transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked~span {
+	opacity: 1;
+	transform: rotate(45deg) translate(-2px, -1px);
+	background: #fff;
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+	opacity: 0;
+	transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+	opacity: 1;
+	transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+	position: fixed;
+	width: 300px;
+	margin: -100px 0 0 0;
+	padding: 50px;
+	padding-top: 125px;
+	right: -100px;
+	background: #0d0d0d;
+    z-index: 10;
+	list-style-type: none;
+	-webkit-font-smoothing: antialiased;
+	transform-origin: 0% 0%;
+	transform: translate(100%, 0);
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+	padding: 10px 0;
+	font-size: 22px;
+}
+
+#menuToggle input:checked~ul {
+	transform: scale(1.0, 1.0);
+	opacity: 1;
+}
+
+#logohead{
+    width: 110px;
+    min-width: 77.95px;
+    margin-left: 5%;
+}
+
+#headleft{
+    display: flex;
+    width: 75%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#headleft nav{
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#headertopo{
+    display: flex;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 999;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 115px;
+    background-color: #131212;
+}
+
+
+header nav a{
+    text-decoration: none;
+    color: #fff; 
+}
+
+#headright{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    margin-right: 5%; 
+    width: 400px;
+}
+
+#pesquisa {
+    display: flex;
+    height: 40px;
+    margin: auto;
+}
+
+#busca1 {
+    position: relative;
+    right: 30px;
+    height: 40px;
+}
+
+#pesquisa img {
+    padding: 6px 4px;
+    height: 25px;
+}
+
+#pesquisa button {
+    float: right;
+    cursor: pointer;
+    background-color: #13121200;
+}
+
+#busca {
+    background-color: #131212;
+    color: #fff;
+    border: 1px solid #fff;
+    height: 40px;
+    width: 155px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    text-indent: 10px;
+    border-radius: 10px;
+}
+
+#lupa{
+    display: none;
+}
+
+body {
+    width: 100%;
+    font-family: Molengo;
+}
+
+h2{
+    font-size: 4.5vw;
+    margin-bottom: 20px;
+    font-family:'labelle';
+    color: #f00;
+    text-shadow: 0px 4px 25px #FF0000;
+    
+}
+
+main{
+    background-color: #0D0D0D;
+    width: 100%;
+    margin: auto;
+    height: auto;
+}
+
+#corpo {
+    width: 100%;
+    margin: auto;
+}
+
+
+#sobre{
+    position: relative;
+    width: 70%;
+    text-align: center;
+    color: #fff;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+#sobre img{
+    position: absolute;
+    margin-right: -15%;
+    top: -10%;
+    right: 0;
+    width: 15vw;
+    z-index: 1;
+}
+
+#sobre h1{
+    color: #EFEDE6;
+    font-size: 7vw;
+    margin-bottom: 100px;
+    font-family:'market' ;
+    text-shadow: 0px 4px 30px #FFD702;
+}
+
+#sobre p{
+    font-size: 2vw;
+    font-family:'Molengo', sans-serif;
+    text-align: left;
+    margin-left: 20px;
+    
+}
+
+#missao{
+    position: relative;
+    color: #fff;
+    width: 100%;
+    margin-top: 100px;    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#missao img{
+    position: relative;
+    width: 40vw;
+}
+
+#missao h2 {
+    margin-left: 9%;
+}
+
+#missao p{
+    font-size: 2vw;
+    margin-left: 9%;
+    font-family: 'Molengo', sans-serif;
+    text-align: left;
+}
+
+#texto1 {
+    width: 35%;
+}
+
+#popeye {
+    width: 50%
+}
+
+#valores{
+    position: relative;
+    color: #fff;
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+#valores div {
+    width: 35%;
+}
+
+#valores img{
+    position: relative;
+    width: 35vw;
+}
+
+#valores h2{
+    font-size: 4.5vw;
+    margin-bottom: 20px;
+    font-family:'labelle';
+    color: #f00;
+    text-shadow: 0px 4px 25px #FF0000;
+    margin-left: 9%;
+}
+
+#valores p{
+    font-size: 2vw;
+    margin-left: 9%;
+    font-family: 'Molengo', sans-serif;
+    text-align: left;
+}
+ 
+#visao{
+    position: relative;
+    color: #fff;
+    width: 100%;
+    margin-top: 80px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#visao div {
+    width: 35%;
+}
+
+#visao img{
+    position: relative;
+    width: 25vw;
+    margin-top: -20%
+}
+
+#visao h2{
+    font-size: 4.5vw;
+    margin-bottom: 20px;
+    font-family:'labelle';
+    color: #f00;
+    text-shadow: 0px 4px 25px #FF0000;
+    margin-left: 9%;
+}
+
+#visao p{
+    font-size: 2vw;
+    margin-left: 9%;
+    font-family: 'Molengo', sans-serif;
+    text-align: left;
+}
+
+#equipe{
+    position: relative;
+    color: #fff;
+    width: 80%;
+    margin-top: 65px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#equipe h2{
+    font-size: 4.5vw;
+    margin-bottom: 20px;
+    font-family:'labelle';
+    color: #f00;
+    text-shadow: 0px 4px 25px #FF0000;
+}
+
+#equipe p{
+    font-size: 2vw;
+    font-family: 'Molengo', sans-serif;
+    text-align: left; 
+}
+
+#logo {
+    margin-right: 130px;
+    margin-bottom: 20px;
+}
+
+#logo img{
+    position: relative;
+    width: 20vw;
+    
+}
+
+#logo h3{
+    color: #fff;
+    text-align: center;
+    font-family: 'market';
+    font-size: 3vw;
+}
+
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: #0e0a1d;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+  
+  #footleft{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #imagem{
+    height: 100%;
+    width: 150px;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #footleft nav{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-left: 1px solid white;
+  }
+  
+  #footleft nav a{
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+  }
+  
+  #footright{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  #copyright{
+    color: white;
+    margin-top: 125px;
+  }
+  
+  #redes{
+    height: 100%;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+#redes p{
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*Final da programação desktop*/
+@media only screen and (max-width: 1066px){
+
+    #menu{
+        display: block;
+    }
+
+    #sobre p, #visao p, #valores p, #missao p {
+        font-size: 2.5vw;
+    }
+
+    footer{
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+  
+    #footleft{
+      flex-direction: column;
+      width: 100%;
+      border-bottom: 1px solid white;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    #footleft nav{
+      border-left: none;
+      height: 150px;
+      text-align: center;
+    }
+  
+    #footleft nav a{
+      margin: 15px 0;
+    }
+  
+    
+    #footright{
+      flex-direction: column-reverse;
+      align-items: center;
+      width: auto;
+    }
+  
+    #redes{
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  
+  #redes div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 150px;
+  }
+    
+    #copyright{
+      margin: 0px;
+    }
+  }
+/*Visualização smartphone*/
+
+@media only screen and (max-width:480px){
+
+    header{
+        justify-content: space-between;
+    }
+    #lupa{
+        display: block;
+        margin-right: 30px;
+        width: 50px;
+    }
+
+    #headleft nav{
+        display: none;
+    }
+
+    main{
+        width: 100%;
+    }
+
+    #sobre{
+        margin: auto;
+        text-align: left;
+        margin-top: 4vh;
+        width: 90%;
+    }
+
+    #sobre h1{
+        margin: auto;
+        text-align: center;
+        font-size: 7vw;
+        margin-bottom: 2vh;
+    }
+
+    #sobre p {
+        font-size: 4vw;
+    }
+
+    #missao{
+        top: 50px;
+        margin: auto;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #texto1 {
+        width: 90%;
+        margin: auto;
+    }
+
+    #popeye {
+        margin: auto;
+    }
+
+    #missao h2 {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        font-size: 8vw;
+    }
+
+    #missao p {
+        width: 100%;
+        margin-left: 0;
+        font-size: 4vw;
+    }
+
+    #valores{
+        width: 90%;
+        height: auto;
+        position: relative;
+        top: 15vh;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    #valores div {
+        width: 90%;
+        margin: auto;
+    }
+
+    #valores div img {
+        left: 25%
+    }
+
+    #valores h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 8vw;
+        margin-left: 0;
+    }
+
+    #valores p{
+        font-size: 4vw;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #visao {
+        margin: auto;
+        width: 90%;
+        margin-top: 20vh;
+        flex-direction: column;
+    }
+
+    #visao h2 {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        font-size: 8vw;
+    }
+
+    section #texto3 {
+        width: 90%;
+        margin: auto;
+    }
+
+    #picapau {
+        margin: auto;
+        margin-top: 10vh;
+    }
+
+    #picapau img {
+        width: 30vw;
+    }
+
+    #visao p {
+        width: 100%;
+        font-size: 4vw;
+        margin-left: 0;
+        margin: auto;
+    }
+
+    #equipe{
+        margin: auto;
+        margin-top: 10vh;
+        flex-direction: column;
+    }
+
+    #equipe h2 {
+        font-size: 8vw;
+    }
+
+    #equipe h3 {
+        font-size: 6vw;
+    }
+
+    #equipe p{
+        font-size: 4vw;
+    }
+
+    #logo {
+        margin: auto;
+        margin-top: 10vh;
+        width: 40%;
+    }
+
+    footer {
+        padding: 2vh 0;
+    }
+
+}
+/*Fim da visualização smartphone*/
+
+/*Inicio da visualização tablet*/
+@media only screen and (max-width:720px) {
+
+    #hamburger {
+        display: block;
+    }
+
+    #avatar, #headright{
+        display: none;
+    }
+
+    #sobre img {
+        display: none;
+    }
+
+    #headright {
+        display: none;
+    }
+
+    #lupa{
+        display: block;
+        padding-top: 5px;
+        margin-right: 45px;
+        width: 40px;
+    }
+
+    #headleft nav{
+        display: none;
+    }
+}
+
+@media only screen and (min-width:481px){
+    @media only screen and (max-width:720px)
+    {
+        #sobre{
+            margin: auto;
+            text-align: left;
+            margin-top: 4vh;
+            width: 90%;
+        }
+    
+        #sobre h1{
+            margin: auto;
+            text-align: center;
+            font-size: 7vw;
+            margin-bottom: 2vh;
+        }
+    
+        #sobre p {
+            font-size: 4vw;
+        }
+    
+        #missao{
+            top: 50px;
+            margin: auto;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        #texto1 {
+            width: 90%;
+            margin: auto;
+        }
+    
+        #popeye {
+            margin: auto;
+        }
+    
+        #missao h2 {
+            width: 100%;
+            margin-left: 0;
+            text-align: center;
+            font-size: 8vw;
+        }
+    
+        #missao p {
+            width: 100%;
+            margin-left: 0;
+            font-size: 4vw;
+        }
+    
+        #valores{
+            width: 90%;
+            height: auto;
+            position: relative;
+            top: 15vh;
+            flex-direction: column;
+            margin: auto;
+        }
+    
+        #valores div {
+            width: 90%;
+            margin: auto;
+        }
+    
+        #valores div img {
+            left: 25%
+        }
+    
+        #valores h2 {
+            width: 100%;
+            text-align: center;
+            font-size: 8vw;
+            margin-left: 0;
+        }
+    
+        #valores p{
+            font-size: 4vw;
+            margin-left: 0;
+            width: 100%;
+        }
+    
+        #visao {
+            margin: auto;
+            width: 90%;
+            margin-top: 20vh;
+            flex-direction: column;
+        }
+    
+        #visao h2 {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            font-size: 8vw;
+        }
+    
+        section #texto3 {
+            width: 90%;
+            margin: auto;
+        }
+    
+        #picapau {
+            margin: auto;
+            margin-top: 10vh;
+        }
+    
+        #picapau img {
+            width: 30vw;
+        }
+    
+        #visao p {
+            width: 100%;
+            font-size: 4vw;
+            margin-left: 0;
+            margin: auto;
+        }
+    
+        #equipe{
+            margin: auto;
+            margin-top: 10vh;
+            flex-direction: column;
+        }
+    
+        #equipe h2 {
+            font-size: 8vw;
+        }
+    
+        #equipe h3 {
+            font-size: 6vw;
+        }
+    
+        #equipe p{
+            font-size: 4vw;
+        }
+    
+        #logo {
+            margin: auto;
+            margin-top: 10vh;
+            width: 40%;
+        }
+
+        footer {
+            padding: 2vh 0;
+        }
+    }
+}
+
+/*Fim da visualização tablet*/
+
+/*Visualização header*/
+
+@media only screen and (max-width: 786px){
+
+}
+
+/*Fim visualização header*/
+
+/*Visualização footer*/
+
+
+  /*Fim visualização footer*/
