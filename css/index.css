@@ -275,6 +275,10 @@ header nav a{
     font-size: 25px;
 }
 
+#carouselExampleAutoplaying{
+    margin-top: 10px;
+}
+
 #alien1 p{
     font-family: enviar;
 }
