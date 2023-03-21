@@ -1,4 +1,4 @@
-<h1 >Nostalgic-World</h1>
+<h1 >Nostalgic World</h1>
 <img src="https://i.imgur.com/stMZm9V.png">
 Um site de streaming de filmes, séries e desenhos antigos idealizado e produzido pela equipe SpeedTech como seu primeiro projeto.
 
