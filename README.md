@@ -11,7 +11,7 @@ Um site de streaming de filmes, séries e desenhos antigos idealizado e produzid
         <img src="Equipe/Gabriel.png" width=100px alt="gabrielLinkedin">
     </a>
     <a href="https://www.linkedin.com/in/matheus-j%C3%BAnior-770746235/">
-        <img src="Equipe/matheus.png" width=100px alt="matheusLinkedin">
+        <img src="Equipe/Matheus.png" width=100px alt="matheusLinkedin">
     </a>
     <a href="https://www.linkedin.com/in/kath-gomes-3220a61b5/">
         <img src="Equipe/Kath.png" width=100px alt="kathLinkedin">
