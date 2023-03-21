@@ -39,6 +39,7 @@ a {
 	text-decoration: none !important;
 	color: #fff;
 	transition: color 0.3s ease;
+    transition: 0.5s;
 }
 
 a:hover{
